@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <title>Funky Chart page</title>
+    <meta name="description" content="Here be charts">
+    <meta name="keywords" content="?">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+    <script>
+        var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Sign Ups', 'General', '2', '3', '4', '5', '6'],
+            datasets: [{
+                label: '# of Sign-Ups',
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    </script>
+
+
+</body>
+</html>
